@@ -1,4 +1,15 @@
 # JLite
+
+[![GitHub issues](https://img.shields.io/github/issues/PhHitachi/JLite)](https://GitHub.com/PhHitachi/JLite/issues/)
+[![Github all releases](https://img.shields.io/github/downloads/Naereen/StrapDown.js/total.svg)](https://github.com/PhHitachi/JLite/releases/)
+[![GitHub forks](https://img.shields.io/github/forks/PhHitachi/JLite)](https://GitHub.com/PhHitachi/JLite/network/)
+[![GitHub contributors](https://img.shields.io/github/contributors/Naereen/StrapDown.js.svg)](https://GitHub.com/PhHitachi/JLite/graphs/contributors/)
+[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/PhHitachi/JLite/tree/master/src)
+[![GitHub release](https://img.shields.io/github/release/PhHitachi/JLite)](https://github.com/PhHitachi/JLite/releases/)
+[![GitHub license](https://img.shields.io/github/license/PhHitachi/JLite?style=flat-square)](https://github.com/PhHitachi/JLite/blob/master/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/PhHitachi/JLite)](https://github.com/PhHitachi/JLite/stargazers/)
+
+
 JLite is javascript DOM library inspired by Jquery, this library is like mini version of Jquery
 
 For testing you need to download the "[JLite.min.js](https://github.com/PhHitachi/JLite/blob/main/JLite.min.js)" files you can't use the raw of this github because have cors protection 
