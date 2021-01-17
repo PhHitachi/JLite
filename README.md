@@ -1,4 +1,4 @@
-# JLite || Javascript DoM Library for easy elements manipulation
+# JLite | Javascript entendable DOM Library for easy elements manipulation
 
 [![GitHub issues](https://img.shields.io/github/issues/PhHitachi/JLite)](https://GitHub.com/PhHitachi/JLite/issues/)
 [![Github all releases](https://img.shields.io/github/downloads/Naereen/StrapDown.js/total.svg)](https://github.com/PhHitachi/JLite/releases/)
@@ -143,3 +143,40 @@ _('h1').click(e => {
 	e.addClass('class1 class2')
 });
 ```
+
+
+#Extend
+
+Also i use `fn.extend` for easy to use and familyaries the jquery developers
+
+```htm
+<body>
+  	<label><input type="checkbox" name="foo"> Foo</label>
+	<label><input type="checkbox" name="bar"> Bar</label><br>
+	<button id="check">Check All</button>
+	<button id="uncheck">UnCheck All</button>
+
+	<script type="text/javascript" src="https://github.com/PhHitachi/JLite/releases/download/v1.0/JLite.min.js"></script>
+	<script type="text/javascript">
+		_.fn.extend({
+			check: function() {
+			    return this.each(e => {
+			    	e.checked = true;
+			    });
+			},
+			uncheck: function() {
+			    return this.each(e => {
+			    	e.checked = false;
+			    });
+			}
+		});
+		_('#check').click(()=>{
+			_( "input[type='checkbox']" ).check();
+		})
+		
+		_('#uncheck').click(()=>{
+			_( "input[type='checkbox']" ).uncheck();
+		})
+	</script>
+</body>
+``` 
