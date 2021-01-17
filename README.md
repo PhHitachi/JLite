@@ -12,8 +12,11 @@
 
 JLite is javascript DOM library inspired by Jquery, this library is like mini version of Jquery
 
-For testing you need to download the "[JLite.min.js](https://github.com/PhHitachi/JLite/blob/main/JLite.min.js)" files you can't use the raw of this github because have cors protection 
+For testing use this:
 
+```html
+<script type="text/javascript" src="https://github.com/PhHitachi/JLite/releases/download/v1.0/JLite.min.js"></script>
+```
 
 # Methods 
 
