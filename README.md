@@ -1,4 +1,4 @@
-# JLite
+# JLite || Javascript DoM Library for easy elements manipulation
 
 [![GitHub issues](https://img.shields.io/github/issues/PhHitachi/JLite)](https://GitHub.com/PhHitachi/JLite/issues/)
 [![Github all releases](https://img.shields.io/github/downloads/Naereen/StrapDown.js/total.svg)](https://github.com/PhHitachi/JLite/releases/)
