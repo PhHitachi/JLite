@@ -9,7 +9,7 @@
 [![GitHub license](https://img.shields.io/github/license/PhHitachi/JLite?style=flat-square)](https://github.com/PhHitachi/JLite/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/PhHitachi/JLite)](https://github.com/PhHitachi/JLite/stargazers/)
 
-
+<b>Description:</b>
 JLite is javascript DOM library inspired by Jquery, this library is like mini version of Jquery
 
 For testing use this:
@@ -17,6 +17,8 @@ For testing use this:
 ```html
 <script type="text/javascript" src="https://github.com/PhHitachi/JLite/releases/download/v1.0/JLite.min.js"></script>
 ```
+> For Fast loading you should download the file in your host instead of using this link because this link will be redirect of aws of github 
+
 
 # Methods 
 
@@ -145,7 +147,12 @@ _('h1').click(e => {
 ```
 
 
-#Extend
+# Extend
+
+```
+_.fn.extend( object )
+```
+<b>Description:</b> Merge the contents of an object into the JLite prototype to provide new JLite instance methods.
 
 Also i use `fn.extend` for easy to use and familyaries the jquery developers
 
