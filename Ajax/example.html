@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Test</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Keywords" content="">
+	<meta name="csrf-token" content="random_token">
+	<link rel="stylesheet" type="text/css" href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>	
+	<link rel="stylesheet" type="text/css" href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>
+	<link rel="stylesheet" type="text/css" href="/components/css/style.css">
+</head>
+<body>
+	<div class="container">
+	    <div class="row d-flex justify-content-center mt-5">
+	        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+	            <div class="card py-3 px-2">
+	                <p class="text-center mb-3 mt-2">Login with</p>
+	                <div class="row mx-auto ">
+	                    <div class="col-4"> <i class="fab fa-twitter"></i> </div>
+	                    <div class="col-4"> <i class="fab fa-facebook"></i> </div>
+	                    <div class="col-4"> <i class="fab fa-google"></i> </div>
+	                </div>
+	                <div class="division">
+	                    <div class="row">
+	                        <div class="col-3">
+	                            <div class="line l"></div>
+	                        </div>
+	                        <div class="col-6"><span>Login with Email</span></div>
+	                        <div class="col-3">
+	                            <div class="line r"></div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <form class="myform" action="/test.php" method="POST">
+	                    <div class="form-group"> <input type="email" name="email" class="form-control" placeholder="Email"> </div>
+	                    <div class="form-group"> <input type="password" name="password" class="form-control" placeholder="Mot de passe"> </div>
+	                    <div class="row">
+	                        <div class="col-md-6 col-12">
+	                            <div class="form-group form-check">
+	                            	<input type="checkbox" name="remember" class="form-check-input" id="exampleCheck1"> 
+	                            	<label class="form-check-label" fors="exampleCheck1">Remember Password</label> </div>
+	                        </div>
+	                        <div class="col-md-6 col-12 bn">Forgot your password?</div>
+	                    </div>
+	                    <div class="form-group mt-3"> 
+	                    	<button type="submit" class="btn btn-block btn-primary btn-lg">
+	                    		<small><i class="far fa-user pr-2"></i>Login</small>
+	                    	</button>
+	                    </div>
+	                </form>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+  	<script type="text/javascript" src="/components/js/JLite.min.js"></script>
+  	<script type="text/javascript" src="/components/js/main.min.js"></script>
+	<script type="text/javascript">
+		_('form').submit({
+			type: 'json', //sent post data with JSON format
+			redirect: true, //allowed redirect 
+			location: 'redirect-to', //get headers value of 'redirect-to' to follow redirection
+			timeout: 6000,
+			callback: function(responseText, xhr){
+				//If you set type as JSON it will be automattically return the response as javascript object
+				//Example: { success:false, message : "Wrong username or Password" }
+				console.log(responseText.message) //Wrong username or Password
+				console.log(xhr.status) //200
+				//alert('redirecting to '+xhr.getResponseHeader('redirect-to')); //Example: /Dashboard/index.php
+			},
+			ontimeout: function(){
+
+			}
+		});
+
+	</script>
+</body>
+</html>
