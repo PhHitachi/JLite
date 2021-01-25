@@ -1,4 +1,4 @@
-# JLite | Javascript entendable DOM Library for easy elements manipulation
+# JLite | Javascript extendable DOM Library for easy elements manipulation
 
 [![GitHub issues](https://img.shields.io/github/issues/PhHitachi/JLite)](https://GitHub.com/PhHitachi/JLite/issues/)
 [![Github all releases](https://img.shields.io/github/downloads/Naereen/StrapDown.js/total.svg)](https://github.com/PhHitachi/JLite/releases/)
@@ -145,7 +145,35 @@ _('h1').click(e => {
 	e.addClass('class1 class2')
 });
 ```
+# Ajax 
 
+```js
+_.http('GET','/user',{
+	headers:{
+		"Content-Type": 'application/json; charset=UTF-8',
+	},
+}).then(response =>{
+	_.each(response.json, (i, item)=>{
+		console.log(item)
+	})
+})
+````
+# FORM/SUBMIT
+```js
+_('form').submit({
+	type: 'json', //sent post data with JSON format
+	redirect: true, //allowed redirect 
+	location: 'redirect-to', //get headers value of 'redirect-to' to follow redirection
+	timeout: 6000,
+	callback: function(responseText, xhr){
+		//If you set type as JSON it will be automattically return the response as javascript object
+		//Example: { success:false, message : "Wrong username or Password" }
+		console.log(responseText.message) //Wrong username or Password
+		console.log(xhr.status) //200
+		//alert('redirecting to '+xhr.getResponseHeader('redirect-to')); //Example: /Dashboard/index.php
+	},
+});
+```
 
 # Extend
 
